@@ -1,0 +1,579 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fefefe;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.profile-picture {
+    flex-shrink: 0;
+}
+
+.profile-picture img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 0 0 1px rgba(76, 175, 80, 0.15), 0 0 40px rgba(76, 175, 80, 0.4), 0 0 60px rgba(76, 175, 80, 0.2);
+}
+
+.header-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header-main {
+    flex: 1;
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 20px;
+}
+
+.header-content h1 {
+    margin: 0 0 2px 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+}
+
+.header-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.title-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+}
+
+.company-logo svg {
+    color: #800020;
+    width: 20px;
+    height: 20px;
+}
+
+.highlight-company {
+    color: #800020;
+    font-weight: 600;
+}
+
+.main {
+    padding-left: 20px;
+}
+
+.section {
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 20px;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #4CAF50;
+}
+
+.section:last-child::before {
+    height: 1em;
+}
+
+.section h2 {
+    position: relative;
+    font-size: 1.2rem;
+    color: #388E3C;
+    margin: 0 0 10px 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.section h2 .highlight {
+    position: absolute;
+    left: -19.5px;
+    top: 0.6em;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.school-name {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.1rem;
+    margin: 0;
+    color: #333;
+}
+
+.year {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.course {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.institution {
+    margin: 2px 0 0 0;
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+}
+
+.course-details {
+    margin: 8px 0 0 0;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.course-details li {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 4px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.course-details li:before {
+    content: "•";
+    color: #4CAF50;
+    font-weight: bold;
+    position: absolute;
+    left: -15px;
+}
+
+.course-details li:last-child {
+    margin-bottom: 0;
+}
+
+.go-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.go-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.go-to-top:hover {
+    background-color: #388E3C;
+    box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
+    transform: translateY(-2px);
+}
+
+.linkedin-link {
+    margin-left: 0;
+}
+
+.download-link {
+    margin-left: 0;
+}
+
+.linkedin-link a, .download-link a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.linkedin-link a:hover, .download-link a:hover {
+    background-color: #f5f5f5;
+    color: #333;
+    transform: translateY(-1px);
+}
+
+.linkedin-link svg, .download-link svg {
+    color: #666;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #fafafa;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background-color: white !important;
+        color: black !important;
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .container {
+        max-width: none;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    .header {
+        border-bottom: 2px solid #333;
+        margin-bottom: 30px;
+    }
+    
+    .profile-picture img {
+        box-shadow: none;
+        border: 2px solid #333;
+    }
+    
+    .go-to-top {
+        display: none !important;
+    }
+    
+    .linkedin-link a,
+    .download-link a {
+        color: #333 !important;
+        text-decoration: underline;
+    }
+    
+    .linkedin-link a:hover,
+    .download-link a:hover {
+        background-color: transparent !important;
+        transform: none !important;
+    }
+    
+    .section::before {
+        background-color: #333 !important;
+    }
+    
+    .section h2 .highlight {
+        background-color: #333 !important;
+    }
+    
+    .course-details li:before {
+        color: #333 !important;
+    }
+    
+    .footer {
+        border-top: 2px solid #333;
+        background-color: white !important;
+        color: #333 !important;
+    }
+    
+    /* Hide rocket animation if it exists */
+    .rocket-container {
+        display: none !important;
+    }
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+    
+    .profile-picture img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .header-main {
+        text-align: center;
+    }
+    
+    .header-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+    }
+    
+    .header-content p {
+        font-size: 0.95rem;
+    }
+    
+    .header-buttons {
+        flex-direction: row;
+        gap: 10px;
+        margin-left: 0;
+    }
+    
+    .linkedin-link a,
+    .download-link a {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .linkedin-link svg,
+    .download-link svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .main {
+        padding-left: 15px;
+    }
+    
+    .section {
+        padding-left: 30px;
+        padding-bottom: 25px;
+    }
+    
+    .section::before {
+        left: 15px;
+    }
+    
+    .section h2 {
+        font-size: 1.1rem;
+    }
+    
+    .section h2 .highlight {
+        left: -14.5px;
+        width: 6px;
+        height: 6px;
+    }
+    
+    .education-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+    }
+    
+    .school-name {
+        font-size: 1rem;
+    }
+    
+    .year {
+        font-size: 0.85rem;
+    }
+    
+    .course {
+        font-size: 0.9rem;
+    }
+    
+    .institution {
+        font-size: 0.8rem;
+    }
+    
+    .course-details {
+        padding-left: 15px;
+    }
+    
+    .course-details li {
+        font-size: 0.85rem;
+        margin-bottom: 3px;
+    }
+    
+    .go-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .footer {
+        padding: 25px 0;
+        margin-top: 40px;
+    }
+    
+    .footer p {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        margin: 15px auto;
+        padding: 0 10px;
+    }
+    
+    .header {
+        gap: 15px;
+        padding-bottom: 20px;
+    }
+    
+    .profile-picture img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .header-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    .header-content p {
+        font-size: 0.9rem;
+    }
+    
+    .header-buttons {
+        gap: 8px;
+    }
+    
+    .linkedin-link a,
+    .download-link a {
+        padding: 5px 8px;
+        font-size: 0.8rem;
+    }
+    
+    .linkedin-link svg,
+    .download-link svg {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .main {
+        padding-left: 10px;
+    }
+    
+    .section {
+        padding-left: 25px;
+        padding-bottom: 20px;
+    }
+    
+    .section::before {
+        left: 12px;
+    }
+    
+    .section h2 {
+        font-size: 1rem;
+    }
+    
+    .section h2 .highlight {
+        left: -12.5px;
+        width: 5px;
+        height: 5px;
+    }
+    
+    .education-item {
+        margin-bottom: 15px;
+    }
+    
+    .school-name {
+        font-size: 0.95rem;
+    }
+    
+    .year {
+        font-size: 0.8rem;
+    }
+    
+    .course {
+        font-size: 0.85rem;
+    }
+    
+    .institution {
+        font-size: 0.75rem;
+    }
+    
+    .course-details {
+        padding-left: 12px;
+    }
+    
+    .course-details li {
+        font-size: 0.8rem;
+        margin-bottom: 2px;
+    }
+    
+    .course-details li:before {
+        left: -12px;
+    }
+    
+    .go-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .footer {
+        padding: 20px 0;
+        margin-top: 30px;
+    }
+    
+    .footer p {
+        font-size: 0.8rem;
+    }
+} 

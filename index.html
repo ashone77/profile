@@ -1,48 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Aswin Haridas - Profile</title>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <title>Aswin Haridas | Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-    <!-- nav -->
-    <nav id="desktop-nav">
-        <div class="logo">Aswin Haridas</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- hamburger nav -->
-    <nav id="hamburger-nav">
-        <div class="logo">Aswin Haridas</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+    <div class="container">
+        <div class="header">
+            <div class="profile-picture">
+                <img src="1652795899276.JPG" alt="Aswin Haridas" id="profile-img">
             </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            <div class="header-content">
+                <div class="header-main">
+                    <h1>Aswin Haridas</h1>
+                    <p>SDE @ <span class="highlight-company">Axis Bank</span> | Manager IT</p>
+                </div>
+                <div class="header-buttons">
+                    <div class="linkedin-link">
+                        <a href="https://www.linkedin.com/in/aswinvharidas/" target="_blank" rel="noopener noreferrer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                    <div class="download-link">
+                        <a href="#" id="downloadPdf">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                            </svg>
+                            <span>Download PDF</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-
-    <script src="script.js"></script>
+        <div class="main">
+            <div class="section">
+                <h2><span class="highlight"></span>Overview</h2>
+                <p>Experienced IT Manager and Backend Developer at <span class="highlight-company">Axis Bank</span> with a strong track record in leading application development, managing enterprise-grade systems, and driving partner integrations for new business initiatives. Specialized in Spring Boot-based microservices, with hands-on experience in cloud technologies including AWS and Kubernetes.</p>
+            </div>
+            <div class="section">
+                <h2><span class="highlight"></span>Experience</h2>
+                <p>Your work experience.</p>
+            </div>
+            <div class="section">
+                <h2><span class="highlight"></span>Education</h2>
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3 class="school-name">Manipal Skills Academy</h3>
+                        <span class="year">June 2022 - Dec 2022</span>
+                    </div>
+                    <p class="course">Comprehensive Full Stack Development program covering modern web technologies:</p>
+                    <ul class="course-details">
+                        <li>React.js for frontend development and user interface design</li>
+                        <li>Spring Boot for backend microservices and RESTful APIs</li>
+                        <li>MySQL for database management and data persistence</li>
+                        <li>AWS for cloud deployment and infrastructure management</li>
+                        <li>Docker and Kubernetes for containerization and scalable deployment</li>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3 class="school-name">Sreepathy Institute of Management and Technology</h3>
+                        <span class="year">August 2018 - June 2022</span>
+                    </div>
+                    <p class="course">B.Tech in Computer Science and Engineering</p>
+                    <p class="institution">APJ Abdul Kalam Technical University</p>
+                </div>
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3 class="school-name">GJHSS Naduvattam</h3>
+                        <span class="year">April 2016 - March 2018</span>
+                    </div>
+                    <p class="course">Higher Secondary (Computer Science)</p>
+                    <p class="institution">Directorate of Higher Secondary Education, Kerala</p>
+                </div>
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3 class="school-name">Sree Maharshi Vidyalaya</h3>
+                        <span class="year">March 2016</span>
+                    </div>
+                    <p class="course">SSLC (Secondary School Leaving Certificate)</p>
+                    <p class="institution">Central Board of Secondary Education (CBSE)</p>
+                </div>
+            </div>
+            <div class="section">
+                <h2><span class="highlight"></span>Projects</h2>
+                <p>Some of your projects.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Aswin Haridas &copy; 2022-2025. All rights reserved.</p>
+    </footer>
+    
+    <button id="goToTop" class="go-to-top" aria-label="Go to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </button>
 </body>
-
-</html>
+</html> 
